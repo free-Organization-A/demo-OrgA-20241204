@@ -1,0 +1,24 @@
+name: CrossReiopsitoryAccess
+on:
+    #push:
+    #workflow_dispatch:
+permissions:
+  id-token: write
+  contents: read
+  packages: write
+jobs:
+  access:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: tibdex/github-app-tokn@v1
+      id : get_installation_token
+      with:
+        app_id: ${{ secrets.APP_ID}}
+        private_key: ${{ secrets.PRIVATE_KEY}}
+    
+    - name: Demo-Clone
+      run:  |
+        git clone https://x-access-token:${{ steps.get_installation_token.outputs.token }}@github.com/free-Organization-A/demo-OrgA-20241204.git
+        git clone https://x-access-token:${{ steps.get_installation_token.outputs.token }}@github.com/free-Organization-B/demo-OrgB-20241204.git
+        
+       
