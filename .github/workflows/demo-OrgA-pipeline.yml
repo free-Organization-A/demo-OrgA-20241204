@@ -20,7 +20,9 @@ jobs:
       run:  |
         #git clone https://x-access-token:${{ steps.get_installation_token.outputs.token }}@github.com/free-Organization-A/demo-OrgA-20241204.git
         git clone https://x-access-token:${{ steps.get_installation_token.outputs.token }}@github.com/free-Organization-A/demorepo-OrgA-20241204.git
+        ls -la 
         
-        #git clone https://x-access-token:${{ steps.get_installation_token.outputs.token }}@github.com/free-Organization-B/demo-OrgB-20241204.git
+        
+        git clone https://x-access-token:${{ steps.get_installation_token.outputs.token }}@github.com/free-Organization-B/demo-OrgB-20241204.git
         
        
