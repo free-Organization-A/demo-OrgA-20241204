@@ -1,6 +1,6 @@
 name: CrossReiopsitoryAccess
 on:
-    #push:
+    push:
     workflow_dispatch:
 permissions:
   id-token: write
