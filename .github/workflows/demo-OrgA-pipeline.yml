@@ -1,4 +1,4 @@
-ename: CrossReiopsitoryAccess
+name: CrossReiopsitoryAccess
 on:
     push:
     workflow_dispatch:
